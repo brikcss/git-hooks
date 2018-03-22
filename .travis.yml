@@ -1,0 +1,34 @@
+### ------------------------------------------------------------------------------------------------
+##  @filename  .travis.yml
+##  @author  brikcss  <https://github.com/brikcss>
+##  @description  Configuration for Travis CI.
+### ------------------------------------------------------------------------------------------------
+
+language: node_js
+cache:
+  bundler: true
+  directories:
+    - node_modules
+notifications:
+  email:
+    on_failure: always
+env: BUILD_LEADER_ID=2 NODE_ENV=production
+
+jobs:
+  include:
+    - stage: Test on node 8
+      node_js: '8'
+      before_script: npm prune -d
+      script: npm run test -d
+    - stage: Test and release on node 9
+      node_js: '9'
+      before_script: npm prune -d
+      script: npm run test -d
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release -d
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
