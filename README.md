@@ -58,6 +58,8 @@ Add desired git hooks to [husky](https://github.com/typicode/husky) in `package.
 
 This hook lints and formats _staged files_ with [eslint](https://eslint.org/), [stylelint](https://stylelint.io/), and [prettier](https://prettier.io/). This can negate the need to lint files during a watch/build process.
 
+`pre-commit-lint` has the following options:
+
 ### Options
 
 `--css` (`.css`): Comma-separated list of file extension(s) to lint with [stylelint](https://stylelint.io/) and [prettify](https://prettier.io/).
