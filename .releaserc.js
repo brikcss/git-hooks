@@ -19,12 +19,13 @@ const config = {
 		// ],
 		assignees: ['thezimmee']
 	},
-	npm: {
-		path: '@semantic-release/npm',
-		npmPublish: true,
-		pkgRoot: '.'
-		// tarballDir: false
-	}
+	npm: '@semantic-release/npm'
+	// npm: {
+	// 	path: '@semantic-release/npm',
+	// 	npmPublish: true,
+	// 	pkgRoot: '.'
+	// 	// tarballDir: false
+	// }
 };
 module.exports = {
 	branch: 'master',
