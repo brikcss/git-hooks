@@ -1,21 +1,22 @@
 const config = {
 	github: {
 		path: '@semantic-release/github',
-		assets: [
-			{
-				path: './bin/pre-commit-lint.js',
-				label: 'Git pre-commit hook which runs eslint, stylelint, and prettier on files.'
-			},
-			{
-				path: './bin/commit-msg-stamp-branch.sh',
-				label:
-					'Git commit-msg hook which appends the source branch name to the commit message.'
-			},
-			{
-				path: './bin/pre-push/check-stage.sh',
-				label: 'Git pre-push hook which prevents pushing files with a dirty stage.'
-			}
-		],
+		assets: './bin/*',
+		// assets: [
+		// 	{
+		// 		path: './bin/pre-commit-lint.js',
+		// 		label: 'Git pre-commit hook which runs eslint, stylelint, and prettier on files.'
+		// 	},
+		// 	{
+		// 		path: './bin/commit-msg-stamp-branch.sh',
+		// 		label:
+		// 			'Git commit-msg hook which appends the source branch name to the commit message.'
+		// 	},
+		// 	{
+		// 		path: './bin/pre-push/check-stage.sh',
+		// 		label: 'Git pre-push hook which prevents pushing files with a dirty stage.'
+		// 	}
+		// ],
 		assignees: ['thezimmee']
 	},
 	npm: {
