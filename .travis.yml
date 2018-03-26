@@ -12,7 +12,7 @@ cache:
 notifications:
   email:
     on_failure: always
-env: BUILD_LEADER_ID=2 NODE_ENV=production
+env: BUILD_LEADER_ID=2 NODE_ENV=test
 
 jobs:
   include:
