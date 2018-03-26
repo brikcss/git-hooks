@@ -16,6 +16,14 @@
 	<a href="https://github.com/brikcss/git-hooks/tree/master">
 		<img alt="Travis branch" src="https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square&label=master">
 	</a>
+	<!-- Codacy. -->
+	<a href="https://www.codacy.com/app/thezimmee/git-hooks">
+		<img alt="NPM version" src="https://img.shields.io/codacy/grade/93e2defdeec749f9bc3fa94100a023e5/master.svg?style=flat-square">
+	</a>
+	<!-- Coveralls -->
+	<a href='https://coveralls.io/github/brikcss/git-hooks?branch=master'>
+		<img src='https://img.shields.io/coveralls/github/brikcss/git-hooks/master.svg?style=flat-square' alt='Coverage Status' />
+	</a>
 	<!-- Commitizen friendly. -->
 	<a href="http://commitizen.github.io/cz-cli/">
 		<img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square">
