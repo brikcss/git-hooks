@@ -42,7 +42,7 @@ if (options.ignore.indexOf('js') === -1) fileExts.js = options.js ? options.js.s
 if (options.ignore.indexOf('json') === -1)
 	fileExts.json = options.json ? options.json.split(',') : ['.json'];
 if (options.ignore.indexOf('css') === -1)
-	fileExts.css = options.css ? options.css.split(',') : ['.css'];
+	fileExts.css = options.css ? options.css.split(',') : ['.css', '.scss'];
 
 // ----------------------
 // Get the party started.
