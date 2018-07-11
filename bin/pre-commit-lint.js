@@ -136,7 +136,7 @@ if (files.css.length) {
 				' '
 			)} --write --loglevel=error --color=always && node ./node_modules/.bin/stylelint ${files.css.join(
 				' '
-			)} --color always`
+			)} --color=always`
 		)
 	);
 }
@@ -149,7 +149,7 @@ if (files.js.length) {
 				' '
 			)} --write --loglevel=error --color=always && node ./node_modules/.bin/eslint ${files.js.join(
 				' '
-			)} --color always --fix`
+			)} --color --fix`
 		)
 	);
 }
