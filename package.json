@@ -33,12 +33,12 @@
 	"dependencies": {
 		"husky": "1.1.2",
 		"lint-staged": "^7.3.0",
-		"prettier": "1.13.4",
+		"prettier": "1.14.3",
 		"standard": "^12.0.1",
-		"stylelint": "9.2.1"
+		"stylelint": "9.6.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "6.2.0",
-		"semantic-release": "15.5.0"
+		"@commitlint/cli": "7.2.1",
+		"semantic-release": "15.10.5"
 	}
 }
