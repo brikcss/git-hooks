@@ -1,5 +1,7 @@
 # Git Hooks
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2fc4b5d8f66e484ebd647bc864c7417d)](https://app.codacy.com/app/thezimmee/git-hooks?utm_source=github.com&utm_medium=referral&utm_content=brikcss/git-hooks&utm_campaign=Badge_Grade_Settings)
+
 > Set of useful Git hooks to make developer's lives easier.
 
 <!-- Shields. -->
