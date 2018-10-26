@@ -42,6 +42,12 @@
 	</a> -->
 </p>
 
+## Environment support
+
+| Node | CLI | UMD | Browser |
+| :--- | :-: | :-- | :------ |
+| 𐄂    |  ✔  | 𐄂   | 𐄂       |
+
 ## Install
 
 ```sh
@@ -50,44 +56,29 @@ npm install @brikcss/git-hooks
 
 ## Setup
 
-Add desired git hooks to [husky](https://github.com/typicode/husky) in `package.json`:
+1.  Configure `.lintstagedrc.js` to run your desired linters and formatters. See [lint-staged documentation](https://www.npmjs.com/package/lint-staged).
+2.  Configure `.huskyrc.js` to run your desired git hooks. See [husky documentation](https://github.com/typicode/husky). For example:
+    ```js
+    module.exports = {
+    	hooks: {
+    		'pre-commit':
+    			'lint-staged',
+    		'commit-msg':
+    			'commitlint -e $HUSKY_GIT_PARAMS && . ./node_modules/.bin/commit-msg-stamp-branch $HUSKY_GIT_PARAMS',
+    		'pre-push':
+    			'. ./node_modules/.bin/pre-push-check-stage && echo "\n[ok] Pushing code..."'
+    	}
+    };
+    ```
 
-```json
-"husky": {
-	"hooks": {
-		"pre-commit": "node ./node_modules/.bin/pre-commit-lint",
-		"commit-msg": "commitlint -e $GIT_PARAMS && . ./node_modules/.bin/commit-msg-stamp-branch ${GIT_PARAMS}",
-		"pre-push": ". ./node_modules/.bin/pre-push-check-stage && echo \"\n[ok] Pushing code...\""
-	}
-}
-```
+### lint-staged
 
-## `pre-commit-lint`
+lint-staged allows you to easily lint and format _staged files_. This negates the need to lint files during a watch/build process. See [lint-staged documentation](https://www.npmjs.com/package/lint-staged) for configuration options.
 
-This hook lints and formats _staged files_ with [eslint](https://eslint.org/), [stylelint](https://stylelint.io/), and [prettier](https://prettier.io/). This can negate the need to lint files during a watch/build process.
+### `commit-msg-stamp-branch`
 
-`pre-commit-lint` has the following options:
+This hook appends the source branch name to the commit message. No configuration necessary, just add the hook to husky:
 
-### Options
-
-`--css` (`.css`): Comma-separated list of file extension(s) to lint with [stylelint](https://stylelint.io/) and [prettify](https://prettier.io/).
-
-`--js` (`.js`): Comma-separated list of file extensions to lint with [eslint](https://eslint.org/) and [prettify](https://prettier.io/).
-
-`--json` (`.json`): Comma-separated list of file extensions to [prettify](https://prettier.io/) as JSON files.
-
-`--ignore`: Comma-separated list of file types to ignore. Can be `css`, `js`, or `json`.
-
-## `commit-msg-stamp-branch`
-
-This hook appends the source branch name to the commit message. No configuration necessary, just add the hook to husky.
-
-## `pre-push-check-stage`
+### `pre-push-check-stage`
 
 This hook ensures stage is not "dirty" prior to running `git push`. No configuration necessary, just add the hook to husky.
-
-## Environment support
-
-| Node   | CLI   | UMD   | Browser   |
-|:-------|:-----:|:------|:----------|
-| 𐄂      | ✔     | 𐄂     | 𐄂         |

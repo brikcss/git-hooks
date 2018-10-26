@@ -2,15 +2,10 @@
 	"name": "@brikcss/git-hooks",
 	"version": "0.0.0-development",
 	"description": "Useful git hooks to make developers' lives easier.",
-	"keywords": [
-		"git",
-		"git hooks",
-		"linter"
-	],
+	"keywords": ["git", "git hooks", "linter"],
+	"license": "MIT",
 	"author": "BrikCSS <https://github.com/brikcss>",
-	"contributors": [
-		"Zimmee <thezimmee@gmail.com>"
-	],
+	"contributors": ["Zimmee <thezimmee@gmail.com>"],
 	"homepage": "https://github.com/brikcss/git-hooks",
 	"repository": {
 		"type": "git",
@@ -19,8 +14,8 @@
 	"bugs": {
 		"url": "https://github.com/brikcss/git-hooks/issues"
 	},
+	"files": ["bin"],
 	"bin": {
-		"pre-commit-lint": "./bin/pre-commit-lint.js",
 		"pre-push-check-stage": "./bin/pre-push-check-stage.sh",
 		"commit-msg-stamp-branch": "./bin/commit-msg-stamp-branch.sh"
 	},
@@ -31,30 +26,19 @@
 		"tag": "dev",
 		"access": "public"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "node ./bin/pre-commit-lint.js",
-			"commit-msg": "commitlint -e $HUSKY_GIT_PARAMS && . ./bin/commit-msg-stamp-branch.sh ${HUSKY_GIT_PARAMS}",
-			"pre-push": ". ./bin/pre-push-check-stage.sh && echo \"\n[ok] Pushing code...\""
-		}
-	},
 	"scripts": {
-		"test": "eslint ./bin/**/*.js",
+		"test": "standard ./bin/**/*.js",
 		"semantic-release": "semantic-release"
 	},
 	"dependencies": {
-		"@brikcss/eslint-config": "0.1.4",
-		"eslint": "4.19.1",
-		"fs-extra": "6.0.1",
-		"husky": "1.0.0-rc.6",
-		"loglevel": "1.6.1",
-		"minimist": "1.2.0",
-		"prettier": "1.13.4",
-		"shelljs": "0.8.2",
-		"stylelint": "9.2.1"
+		"husky": "1.1.2",
+		"lint-staged": "^7.3.0",
+		"prettier": "1.14.3",
+		"standard": "^12.0.1",
+		"stylelint": "9.6.0"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "6.2.0",
-		"semantic-release": "15.5.0"
+		"@commitlint/cli": "7.2.1",
+		"semantic-release": "15.10.5"
 	}
 }
