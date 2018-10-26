@@ -1,3 +1,5 @@
+/*! .lintstagedrc.js | @author brikcss <https://github.com/brikcss> | @reference <https://github.com/okonet/lint-staged> */
+
 module.exports = {
   linters: {
     '*.js': ['standard --fix', 'git add'],

@@ -1,3 +1,5 @@
+/*! .releaserc.js | @author brikcss <https://github.com/brikcss> | @reference https://github.com/semantic-release/semantic-release/blob/caribou/docs/usage/configuration.md#configuration */
+
 const config = {
   github: {
     path: '@semantic-release/github',

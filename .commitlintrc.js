@@ -1,9 +1,4 @@
-/** ------------------------------------------------------------------------------------------------
- *  @filename  commitlint.config.js
- *  @author  brikcss  <https://github.com/brikcss>
- *  @description  Configuration object for commitlint, a git commit message linter. See
- *      https://github.com/marionebl/commitlint/.
- ** --------------------------------------------------------------------------------------------- */
+/*! .commitlintrc.js | @author brikcss <https://github.com/brikcss> | @reference http://marionebl.github.io/commitlint/ */
 
 module.exports = {
   rules: {

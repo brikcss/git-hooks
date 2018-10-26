@@ -1,8 +1,4 @@
-### ------------------------------------------------------------------------------------------------
-##  @filename  .travis.yml
-##  @author  brikcss  <https://github.com/brikcss>
-##  @description  Configuration for Travis CI.
-### ------------------------------------------------------------------------------------------------
+#! .travis.yml | @author brikcss <https://github.com/brikcss> | @reference https://docs.travis-ci.com/ #
 
 language: node_js
 node_js: '8'
