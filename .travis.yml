@@ -12,7 +12,7 @@ cache:
 notifications:
   email:
     on_failure: always
-env: BUILD_LEADER_ID=2 NODE_ENV=test
+env: BUILD_LEADER_ID=1 NODE_ENV=test
 
 jobs:
   include:
@@ -26,5 +26,5 @@ jobs:
         script:
           - npx semantic-release
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - master
