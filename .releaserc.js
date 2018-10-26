@@ -8,7 +8,7 @@ const config = {
 }
 module.exports = {
   branch: 'master',
-  // repositoryUrl: 'https://github.com/brikcss/git-hooks',
+  repositoryUrl: 'https://github.com/brikcss/git-hooks',
   verifyConditions: [config.npm, config.github],
   analyzeCommits: {
     preset: 'angular',

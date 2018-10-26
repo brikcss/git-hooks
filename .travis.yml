@@ -19,12 +19,12 @@ jobs:
     - stage: Test on node 8
       node_js: '8'
       before_script: npm prune -d
-      script: npm run test -d
+      script: npm test -d
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          - npx semantic-release
+        script: npx semantic-release
+
 branches:
-  only:
-    - master
+  except:
+    - /^v\d+\.\d+\.\d+$/
