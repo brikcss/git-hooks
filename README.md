@@ -1,5 +1,7 @@
 # Git Hooks
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/brikcss/git-hooks.svg)](https://greenkeeper.io/)
+
 > Set of useful Git hooks to make developer's lives easier.
 
 <!-- Shields. -->
