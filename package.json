@@ -16,8 +16,9 @@
   },
   "files": ["bin"],
   "bin": {
-    "pre-push-check-stage": "./bin/pre-push-check-stage.sh",
-    "commit-msg-stamp-branch": "./bin/commit-msg-stamp-branch.sh"
+    "commit-msg-stamp-branch": "./bin/commit-msg-stamp-branch.sh",
+    "github-zip": "./bin/github-zip.sh",
+    "pre-push-check-stage": "./bin/pre-push-check-stage.sh"
   },
   "directories": {
     "bin": "./bin"

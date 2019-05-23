@@ -67,3 +67,7 @@ This hook appends the source branch name to the commit message. No configuration
 ### `pre-push-check-stage`
 
 This hook ensures stage is not "dirty" prior to running `git push`. No configuration necessary, just add to husky's configuration as shown above.
+
+### `github-zip`
+
+This hook is intended for use with [Travis](http://travis-ci.org) or similar continuous integration build tools. It grabs files recently published to NPM and compresses them into both a `.zip` and `.tgz` file. This allows you to release the same exact files to GitHub as were released on NPM.
