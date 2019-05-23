@@ -3,9 +3,10 @@
 module.exports = {
   linters: {
     '*.js': ['standard --fix', 'git add'],
-    '*.css': ['prettier --parser css --write', 'stylelint', 'git add'],
     '*.json': ['prettier --parser json --write', 'git add'],
-    '*.md': ['prettier --parser markdown --write', 'git add']
+    '*.{yml,yaml}': ['prettier --parser json --write', 'git add'],
+    '*.md': ['prettier --parser markdown --write', 'git add'],
+    '*.html': ['prettier --parser html --write', 'git add']
   },
   concurrent: true,
   globOptions: {
