@@ -4,7 +4,7 @@ module.exports = {
   linters: {
     '*.js': ['standard --fix', 'git add'],
     '*.json': ['prettier --parser json --write', 'git add'],
-    '*.{yml,yaml}': ['prettier --parser json --write', 'git add'],
+    '*.{yml,yaml}': ['prettier --parser yaml --write', 'git add'],
     '*.md': ['prettier --parser markdown --write', 'git add'],
     '*.html': ['prettier --parser html --write', 'git add']
   },
