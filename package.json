@@ -38,7 +38,7 @@
     "lint-staged": "^9.2.5",
     "prettier": "1.18.2",
     "standard": "^14.2.0",
-    "stylelint": "^10.1.0"
+    "stylelint": "^11.0.0"
   },
   "devDependencies": {
     "semantic-release": "^15.13.24"
