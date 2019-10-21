@@ -32,15 +32,15 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@brikcss/stylelint-config-css": "^0.2.1",
-    "@commitlint/cli": "^8.1.0",
-    "husky": "3.0.5",
-    "lint-staged": "^9.2.5",
+    "@brikcss/stylelint-config-css": "^0.2.2",
+    "@commitlint/cli": "^8.2.0",
+    "husky": "3.0.9",
+    "lint-staged": "^9.4.2",
     "prettier": "1.18.2",
-    "standard": "^14.2.0",
-    "stylelint": "^10.1.0"
+    "standard": "^14.3.1",
+    "stylelint": "^11.1.1"
   },
   "devDependencies": {
-    "semantic-release": "^15.13.24"
+    "semantic-release": "^15.13.27"
   }
 }
